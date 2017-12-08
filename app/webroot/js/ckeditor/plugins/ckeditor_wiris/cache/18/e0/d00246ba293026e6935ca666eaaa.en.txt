@@ -1,0 +1,1 @@
+fraction numerator 11 over denominator 16 end fraction equals fraction numerator 2 squared plus 2 squared minus A D squared over denominator 2 cross times 2 cross times 2 end fraction rightwards double arrow A D squared equals 2.5

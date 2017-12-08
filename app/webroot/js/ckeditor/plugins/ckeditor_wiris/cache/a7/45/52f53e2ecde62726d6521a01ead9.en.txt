@@ -1,0 +1,1 @@
+Syntax error from line 1 column 322 to line 1 column 343. Unexpected '<mo '.

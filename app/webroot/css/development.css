@@ -1,0 +1,128 @@
+.redDiv {
+    color: red;
+    text-align: right;
+}
+
+.greenDiv {
+    color: green;
+}
+
+table .headings th a{color: #ECF0F1;}
+/*
+.successMessage{position: fixed; top: 80px;  left: 50%;}
+#flashMessage{background-color: #3c3c3c; color: #fff; padding: 10px 20px; border-radius: 10px; position: relative;}*/
+select[multiple], select[size] {
+    height: 200px;
+}
+select[multiple] option, select[size] option {padding:2px 0px;}
+
+.treeview span.indent {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.highlight {
+    border: 2px dotted  black;
+    min-width:900px;
+    min-height: 105px;
+    clear: both;
+}
+
+#sortable1 .sec-panel:active {
+    cursor: move;
+} 
+#sortable1 .ui-sortable-helper {
+    cursor: move;
+}
+/*.progress.active .progress-bar {
+    -webkit-transition: none !important;
+    transition: none !important;
+}*/
+
+.creation-ttl{margin:40px 20px 20px; color:#2c3e50; font-size: 14px;}
+
+
+/*****************Institute Analytics**********/
+.new-section-cont:before{
+  content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100% !important;
+    border-left: 1px solid #ADB2B5 !important;
+    margin-top: 0px !important;
+}
+.sml-mid-head-top{
+  font-size: 22px;
+  line-height: 34px;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 10px;
+  color: #5a738e;
+  text-transform: capitalize;
+}
+.sml-mid-head-top span{
+  font-weight: 600;
+  font-size: 40px !important;
+  line-height: 47px !important;
+  color: #f37372;
+}
+ul.new-batch-student-list, ul.new-batch-student-list2{
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid #adb2b5;
+  list-style-type: none;
+}
+ul.new-batch-student-list li{
+  float: left;
+  border-right: 1px solid #adb2b5;
+  text-align: center;
+  width: 33%;
+  font-size: 12px;
+  color: #666;
+  padding-top: 10px;
+}
+ul.new-batch-student-list2 li{
+  float: left;
+  border-right: 1px solid #adb2b5;
+  text-align: center;
+  width: 50%;
+  font-size: 12px;
+  color: #666;
+  padding-top: 10px;
+}
+ul.new-batch-student-list li:last-child, ul.new-batch-student-list2 li:last-child{
+  border-right: none;
+}
+ul.new-batch-student-list li span, ul.new-batch-student-list2 li span{
+  display: block;
+  font-size: 24px !important;
+  font-weight: 600;
+  color: #5a738e;
+}
+/***********************************************/
+
+.show-compPercent{
+  width: 68px;
+  height: 68px;
+  background-color: #f5f5f5;
+  border: solid 1px #5e6974;
+  border-radius: 50%;
+  font-size: 18px;
+  line-height: 68px;
+  font-weight: 400;
+  color: #1abb9c;
+  text-align: center;
+}
+
+.show-compPercent-txt{
+  font-size: 12px;
+  font-weight: 400;
+  color: #5e6974;
+  text-align: center;
+  display: block;
+  margin-bottom: 10px;
+}
+.sectionPanel .sec-body .sec-body-ttl .grbg:hover .show-compPercent-txt{
+    color: #fff;
+}

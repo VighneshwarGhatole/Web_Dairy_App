@@ -1,0 +1,1 @@
+fraction numerator sin P over denominator a end fraction equals fraction numerator sin Q over denominator b end fraction equals fraction numerator sin R over denominator c end fraction equals lambda

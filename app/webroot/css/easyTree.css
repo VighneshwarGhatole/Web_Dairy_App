@@ -1,0 +1,138 @@
+/** Easy Tree style */
+.easy-tree {
+    min-height: 200px;
+    margin-bottom: 20px;
+    background-color: #f7f7f7;
+    color: #5A738E;
+    border: none;
+    border-top: none;
+    padding-bottom: 15px;
+}
+
+.easy-tree > ul {
+    padding-left: 15px;
+}
+
+.easy-tree li {
+    list-style-type: none;
+    margin: 0;
+    padding: 10px 5px 0 5px;
+    position: relative
+}
+
+.easy-tree li::before, .easy-tree li::after {
+    content: '';
+    left: -30px;
+    position: absolute;
+    right: auto
+}
+
+.easy-tree li::before {
+    border-left: 1px solid #5A738E;
+    bottom: 50px;
+    height: 100%;
+    top: 0;
+    width: 1px
+}
+
+.easy-tree li::after {
+    border-top: 1px solid #5A738E;
+    height: 20px;
+    top: 29px;
+    width: 35px
+}
+
+.easy-tree li > span {
+    border: 1px solid #5A738E;
+    border-radius: 3px;
+    display: inline-block;
+    padding: 5px;
+    text-decoration: none
+}
+
+.easy-tree li.parent_li > span {
+    cursor: pointer
+}
+
+
+.easy-tree > ul > li::before, .easy-tree > ul > li::after {
+    border: 0
+}
+
+.easy-tree li:last-child::before {
+    height: 30px
+}
+
+.easy-tree li.parent_li > span:hover, .easy-tree li.parent_li > span:hover + ul li span {
+    background: #f5f5f5;
+    color: #5A738E;
+}
+
+.easy-tree li.parent_li > span:hover + ul li.li_selected span {
+    background: #f5f5f5;
+    color: #5A738E;
+}
+
+.easy-tree li > span > a {
+    color: #5A738E;
+    text-decoration: none;
+    padding-left: 5px;
+}
+
+.easy-tree li > span > span.glyphicon-folder-close, .easy-tree li > span > span.glyphicon-folder-open {
+    margin-right: 5px;
+}
+
+.easy-tree li.li_selected > span, .easy-tree li.li_selected > span > a {
+    background: #5A738E;
+    color: #fff;
+}
+
+.easy-tree li.li_selected > span:hover, .easy-tree li.li_selected > span:hover > a {
+    background: #5A738E;
+    color: #fff;
+}
+
+.easy-tree .easy-tree-toolbar {
+    background-color: #fff;
+    position: fixed;
+right: 43px;
+z-index: 999;
+margin-top:50px;
+text-align: center;
+}
+.easy-tree .easy-tree-toolbar h4 {
+    background-color: #234796;
+    text-align: center;
+padding: 10px;
+margin: 0px;
+color: #fff;
+}
+
+.easy-tree .easy-tree-toolbar > div {
+    float:left;
+    max-width:350px;
+}
+.easy-tree .easy-tree-toolbar > .create > .input-group{margin-top: 25px;}
+.easy-tree .easy-tree-toolbar > .create > button{margin-left:70px;} 
+
+.easy-tree .easy-tree-toolbar > div > button {
+    border-radius: 0;
+    margin: 20px 5px;
+}
+
+.easy-tree .easy-tree-toolbar .create .input-group {
+    top: -5px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.easy-tree .easy-tree-toolbar .create .input-group input {
+    border-radius: 0;
+}
+
+.easy-tree .easy-tree-toolbar .create .input-group button {
+    border-radius: 0;
+}
+.easy-tree li.li_selected > span input{color:#5A738E;}
+.btnprp{display: table;}

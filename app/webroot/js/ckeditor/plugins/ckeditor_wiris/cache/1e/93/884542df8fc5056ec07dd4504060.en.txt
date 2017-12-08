@@ -1,0 +1,1 @@
+P Q equals P R equals fraction numerator P Q over denominator 2 sin R end fraction equals fraction numerator Q R over denominator 2 sin P end fraction equals fraction numerator P R over denominator 2 sin Q end fraction

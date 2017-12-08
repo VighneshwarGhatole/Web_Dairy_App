@@ -1,0 +1,73 @@
+
+<table id="example" class="table table-striped table-bordered" width="100%" cellspacing="0">
+	<thead>
+	  <tr>
+	  	<th>#</th>
+	  	<th>Manager Name</th>
+	    <th>Agent Name</th>
+	    <th>Username</th>
+	    <th>Password</th>
+	    <th>Email</th>
+	    <th>Phone</th>
+	    <th>Status</th>
+	    <th>Action</th>
+	  </tr>
+	</thead>
+	<tbody>
+
+	<?php if(count($Users) > 0) { $counter=1; ?>
+		<?php  foreach ($Users as $key => $user) { ?>
+				<tr>
+					<td><?php echo $counter; ?></td>
+					<td><?php echo (isset($user['ParentGroup']['fname']) ? ucwords($user['ParentGroup']['fname']) : '--'); ?></td>
+				    <td><?php echo ucwords($user['User']['fname']); ?></td>
+				    <td><?php echo base64_decode($user['User']['agentId']); ?></td>
+				    <td><?php echo base64_decode($user['User']['password']); ?></td>
+				    <td><?php echo $user['User']['email']; ?></td>
+				    <td><?php echo $user['User']['mobile_no']; ?></td>
+				    <td class="change-status" id="<?php echo $user['User']['id']; ?>">
+				    	<?php echo (($user['User']['status']==1) ? '<span class="active-status">Active</span>' : '<span class="in-active-status">In-active</span>'); ?>				    	
+				    </td>
+				    <td>
+				    	<a href="<?php echo $this->webroot; ?>Users/edit/id:<?php echo $user['User']['id']; ?>" title="Edit">
+          					<span class="glyphicon glyphicon-pencil"></span>
+        				</a>
+        				<a href="<?php echo $this->webroot; ?>Users/delete/id:<?php echo $user['User']['id']; ?>" title="Delete">
+          					<span class="glyphicon glyphicon-trash"></span>
+        				</a>
+        			</td>
+				</tr>
+			
+		<?php $counter++; } ?>
+	<?php	}else{ ?>
+		<tr>
+			<td colspan="6" align="center">No Record Found</td>
+	 	</tr>
+	 <?php } ?>
+	</tbody>
+</table>
+<script type="text/javascript">
+	$(document).ready(function() {
+        $('#example').DataTable();
+    });
+	$('.change-status').on('click', function(e){
+		var uId = this.id;
+		if(confirm('Do you want to modify status?')){
+			$("#loaderImg").show();
+	        $.get(webURL + "Users/updateagentstatus/uId:" + uId, function (data) {
+	        	var jdata = JSON.parse(data);	        	
+	            if (jdata.status==1) {
+	            	if(jdata.message==='Active'){
+	            		$('#'+uId).html("<span class='active-status'>Active</span>");	            		
+	            	}else{
+	            		$('#'+uId).html("<span class='in-active-status'>In-active</span>");  
+	            	}        
+	            } else{
+	                
+	            }
+	            $("#loaderImg").hide();
+	        });
+		}
+	});
+
+</script>
